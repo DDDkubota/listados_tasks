@@ -15,13 +15,15 @@ import { RootStack } from './app/screens/RootStack';
 
 function App(): JSX.Element {
   return (
-    <NavigationContainer >
+   
         <Provider store={store}>
+           <NavigationContainer >
     <NativeBaseProvider>
       <RootStack />
     </NativeBaseProvider>
-    </Provider>
     </NavigationContainer>
+    </Provider>
+    
   
   );
 }

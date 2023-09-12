@@ -1,4 +1,4 @@
-import { Button, ButtonText, Text, View } from '@gluestack-ui/themed'
+import { Button, Text, View } from 'native-base'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React from 'react'
 import { RootStackParamList } from '../../INTERFACES/NAVEGATION_INTERFACES';

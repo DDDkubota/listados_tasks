@@ -1,4 +1,4 @@
-import { Box, CheckIcon, Checkbox, CheckboxIcon, CheckboxIndicator, CheckboxLabel } from '@gluestack-ui/themed';
+import { Box, CheckIcon, Checkbox } from 'native-base';
 import React from 'react'
 
 
@@ -11,12 +11,10 @@ type Props = {
 
 export const CardTask = ({id, title, check}:Props) => {
   return (
-    <Box  bgColor='$purple900' h='$8' justifyContent='center'>
+    <Box  backgroundColor='emerald.600' h='8' justifyContent='center'>
         <Checkbox size="md" isReadOnly value='check' isChecked={check}>
-  <CheckboxIndicator mr="$2">
-    <CheckboxIcon as={CheckIcon} />
-  </CheckboxIndicator>
-  <CheckboxLabel fontSize='$2xl' color='$white'>{title}</CheckboxLabel>
+
+  {title}
 </Checkbox>
     </Box>
   )

@@ -1,4 +1,4 @@
-import { Button, ButtonText } from '@gluestack-ui/themed';
+import { Button } from 'native-base';
 import React from 'react'
 
 
@@ -16,9 +16,9 @@ export const ButtonPrimary = ({onPress,title}:Props) => {
     }}
     style={{ margin: 10 }}
   >
-      <ButtonText>
+     
       {title}
-      </ButtonText>
+      
     
   </Button>
   )

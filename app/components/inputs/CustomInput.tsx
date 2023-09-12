@@ -1,4 +1,4 @@
-import { Input, InputField } from '@gluestack-ui/themed';
+import { Input } from 'native-base';
 import React from 'react'
 import { Control, Controller } from "react-hook-form"
 
@@ -20,11 +20,12 @@ export const CustomInput = ({control, placeholder, name}:Props) => {
     render={({ field: { onChange, onBlur, value } }) => (
         <Input
         variant="outline"
-        size="lg"
-      >
+        w="80%"
+        onChangeText={onChange} value={value} placeholder={placeholder}
+      />
 
-        <InputField onChangeText={onChange} value={value} placeholder={placeholder} />
-      </Input>
+       
+     
     )}
     name={name}
   />

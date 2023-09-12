@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import Modal from "react-native-modal";
 import { 
-  ModalHeader, Button, ButtonText, FormControl, FormControlLabel, FormControlLabelText, FormControlHelper, FormControlHelperText, FormControlError, FormControlErrorText, Center, HStack, Box } from '@gluestack-ui/themed'
+  Button,  FormControl, Center, HStack, Box } from 'native-base'
 import { CustomInput } from './inputs/CustomInput';
 import { FormData } from '../INTERFACES/TASK_INTERFACES';
 import { addTask } from '../store/slices/taskSlice';
@@ -56,57 +56,53 @@ export const ModalForm = ({showModal,
       
       > 
       
-        <Center bg='$white' >
-          <ModalHeader>
-      
-          </ModalHeader>
-          <Box w='$4/5' justifyContent='space-around' mb='$1.5'>
+        <Center bg='white' >
+        
+          <Box w='4/5' justifyContent='space-around' mb='1.5'>
           <FormControl
-        size="lg"
         isDisabled={false}
         isInvalid={errors.title ? true : false}
         isReadOnly={false}
         isRequired={false} 
         >
-    <FormControlLabel mb="$1">
-      <FormControlLabelText>Nueva Task</FormControlLabelText>
-    </FormControlLabel>
+    <FormControl.Label mb="1">
+      Nueva Task
+    </FormControl.Label>
     <CustomInput
         control={control}
         placeholder="Titulo de Task"
         name="title"
         />
-    <FormControlHelper>
-      <FormControlHelperText>
-        Maximo 100 caracteres
-      </FormControlHelperText>
-    </FormControlHelper>
-    <FormControlError>
+    <FormControl.HelperText>
       
-      <FormControlErrorText>
+        Maximo 100 caracteres
+      
+    </FormControl.HelperText>
+    <FormControl.ErrorMessage>
+      
+    
         Este Campo es requerido
-      </FormControlErrorText>
-    </FormControlError>
+      
+    </FormControl.ErrorMessage>
   </FormControl>
     
           </Box>
           <HStack space="md" reversed={false}>
             <Button
               variant="outline"
-              action="secondary"
               onPress={() => {
                 setShowModal(false)
               }}
             >
-              <ButtonText>Cancelar</ButtonText>
+              Cancelar
             </Button>
             <Button
             
-              action="positive"
-              borderWidth="$0"
+             
+              borderWidth="0"
               onPress={handleSubmit(onSubmit)}
             >
-              <ButtonText>Agregar</ButtonText>
+              Agregar
             </Button>
           </HStack>
         </Center>

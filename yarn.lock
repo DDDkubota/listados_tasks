@@ -1516,9 +1516,9 @@
     "@gluestack-ui/utils" "^0.1.9"
     "@react-native-aria/focus" "^0.2.7"
 
-"@gluestack-ui/themed@^0.1.36":
+"native-base@^0.1.36":
   version "0.1.36"
-  resolved "https://registry.yarnpkg.com/@gluestack-ui/themed/-/themed-0.1.36.tgz#3426da10b3fb432373a4f87b85f69deebd877dbe"
+  resolved "https://registry.yarnpkg.com/native-base/-/themed-0.1.36.tgz#3426da10b3fb432373a4f87b85f69deebd877dbe"
   integrity sha512-ecR3cALrFjInoV/+WCH+oWwcozURJiq68ZU2Oi0l5aBSctihMaVafVDWeu9flBrcPVcEOzqRnulQ6oicO1EhBw==
   dependencies:
     "@expo/html-elements" latest

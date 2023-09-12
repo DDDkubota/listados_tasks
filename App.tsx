@@ -5,7 +5,7 @@
  * @format
  */
 import React from 'react';
-import { config, GluestackUIProvider} from "@gluestack-ui/themed"
+import { NativeBaseProvider} from "native-base"
 import { Provider } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -17,9 +17,9 @@ function App(): JSX.Element {
   return (
     <NavigationContainer >
         <Provider store={store}>
-    <GluestackUIProvider config={config.theme}>
+    <NativeBaseProvider>
       <RootStack />
-    </GluestackUIProvider>
+    </NativeBaseProvider>
     </Provider>
     </NavigationContainer>
   

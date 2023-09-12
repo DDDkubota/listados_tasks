@@ -1,4 +1,4 @@
-import { Badge, BadgeIcon, BadgeText, Button, ButtonText, Center, FlatList, GlobeIcon, Spinner, Text, TrashIcon, View } from '@gluestack-ui/themed'
+import { Badge, Center, FlatList, Spinner, Text, View } from 'native-base'
 import React, { useEffect, useState } from 'react'
 import {ListRenderItem} from 'react-native';
 import { getUsers } from '../../API/ServiceUser'
@@ -41,21 +41,21 @@ useEffect(() => {
 
   
   return (
-    <Center marginVertical={0} w={'$full'} h={'$full'}>
+    <Center  w={'full'} h={'full'}>
      {loadindData ? <Spinner size={'large'} color="$emerald600" />
      
     : dataResponse.length>0 ?
 
     <FlatList
-    w={'$80'}
+    w={'80'}
     data={dataResponse}
     renderItem={renderItem}
     keyExtractor={(item:User) => item.id}
   />
     :
-    <Badge size="lg" variant="solid" borderRadius="$none" action="error">
-    <BadgeText>No hay Datos para mostrar </BadgeText>
-    <BadgeIcon as={TrashIcon} size='lg' />
+    <Badge size="lg" variant="solid" borderRadius="none" colorScheme="danger">
+    No hay Datos para mostrar 
+    
   </Badge>
 
     }

@@ -1,6 +1,6 @@
 import React, { useState,  useEffect } from 'react'
 
-import { Box, Button, ButtonText, Center, Heading, ScrollView, Toast,  ToastTitle, VStack, useToast } from '@gluestack-ui/themed'
+import { Box, Button, Center, Heading, ScrollView, Toast,  VStack, useToast } from 'native-base'
 
 import { ModalForm } from '../../components/ModalForm';
 import { useSelector } from 'react-redux';
@@ -20,16 +20,7 @@ const tasksSaved = useSelector((state: RootState) => state.tasks)
 useEffect(() => {
   if(success){
     toast.show({
-      placement: "top",
-      render: ({ id }) => {
-        return (
-          <Toast key={id} action="success" variant="solid">
-            <VStack space="xs">
-              <ToastTitle>Nueva Task Agregada!</ToastTitle>
-            </VStack>
-          </Toast>
-        )
-      },
+      description: "Nueva Tasks!"
     })
   }
   
@@ -57,15 +48,15 @@ useEffect(() => {
      <Button
      onPress={() => setShowModal(true)}
      size='lg'
-     borderRadius='$lg'
+     borderRadius='lg'
      >
-       <ButtonText>
+       
            Agregar Tasks
-       </ButtonText>
+       
      </Button>
-     <ScrollView h="$96" w="$80">
-    <Center mt="$3" mb="$4">
-      <Heading fontSize="$2xl">Task Agregadas</Heading>
+     <ScrollView h="96" w="80">
+    <Center mt="3" mb="4">
+      <Heading fontSize="2xl">Task Agregadas</Heading>
     </Center>
     <VStack flex={1} space='md'>
       {tasksSaved.tasks.map((task,i) => 
